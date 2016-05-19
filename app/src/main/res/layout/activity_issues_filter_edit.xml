@@ -38,40 +38,42 @@
             android:padding="10dp">
 
             <TextView
-                style="@style/HeaderTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/section_issue_status" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/inset_background"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rb_open"
-                    style="@style/SubtitleText"
-                    android:text="@string/status_open"
-                    android:textColor="@color/text" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_open"/>
 
                 <RadioButton
                     android:id="@+id/rb_closed"
-                    style="@style/SubtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginStart="10dp"
-                    android:text="@string/status_closed"
-                    android:textColor="@color/text" />
+                    android:text="@string/status_closed"/>
             </RadioGroup>
 
             <TextView
                 android:id="@+id/tv_assignee_label"
-                style="@style/HeaderTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:paddingTop="5dp"
                 android:text="@string/section_issue_assigned" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/inset_background"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="10dp">
@@ -85,60 +87,61 @@
 
                 <TextView
                     android:id="@+id/tv_assignee"
-                    style="@style/SubtitleText"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:includeFontPadding="true"
                     android:singleLine="true"
-                    android:text="@string/assignee_anyone"
-                    android:textColor="@color/text" />
+                    android:text="@string/assignee_anyone"/>
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_milestone_label"
-                style="@style/HeaderTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:paddingTop="15dp"
                 android:text="@string/section_issue_milestone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/inset_background"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:padding="10dp">
 
                 <TextView
                     android:id="@+id/tv_milestone"
-                    style="@style/SubtitleText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:singleLine="true"
-                    android:textColor="@color/text" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:singleLine="true"/>
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_labels_label"
-                style="@style/HeaderTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:paddingTop="15dp"
                 android:text="@string/section_issue_labels" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/inset_background"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:padding="10dp">
 
                 <TextView
                     android:id="@+id/tv_labels"
-                    style="@style/SubtitleText"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/none"
-                    android:textColor="@color/text" />
+                    android:text="@string/none"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 
 </RelativeLayout>

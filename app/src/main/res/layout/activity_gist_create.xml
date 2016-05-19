@@ -16,6 +16,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -45,7 +46,8 @@
                 android:paddingEnd="10dp"
                 android:text="@string/make_public"
                 android:textColor="@color/text"
-                android:theme="@style/Theme.GitHub.CheckBoxLight" />
+                android:theme="@style/Theme.GitHub.CheckBoxLight"
+                android:checked="false" />
 
             <View style="@style/Separator" />
 
@@ -57,37 +59,35 @@
                 android:paddingRight="10dp"
                 android:paddingTop="5dp">
 
-                <TextView
-                    style="@style/TitleText"
-                    android:text="@string/description" />
-
-                <EditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/et_gist_description"
-                    style="@style/FormalSingleLineEditText"
-                    android:layout_width="match_parent" />
-
-                <TextView
-                    style="@style/TitleText"
-                    android:paddingTop="15dp"
-                    android:text="@string/file_name" />
-
-                <EditText
-                    android:id="@+id/et_gist_name"
-                    style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true" />
+                    app:met_floatingLabel="highlight"
+                    android:hint="@string/description"/>
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/et_gist_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/file_name"
+                    app:met_floatingLabel="highlight"
+                    android:singleLine="true"/>
 
                 <TextView
-                    style="@style/TitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:paddingTop="15dp"
                     android:text="@string/file_content" />
 
+
                 <EditText
                     android:id="@+id/et_gist_content"
-                    style="@style/EditText"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
                     android:gravity="top"
                     android:inputType="textMultiLine|textAutoComplete"
                     android:minLines="5"
@@ -97,6 +97,7 @@
 
                     <requestFocus />
                 </EditText>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
